@@ -1,0 +1,173 @@
+$dark: #050E21;
+$shadow: #050E2180;
+$link-hover-dark: #091a3d;
+$light: #8aa7c0;
+$shining: #8aa7c080;
+$link-hover-light: #8eacb3;
+
+:root {
+  font: normal normal normal 16px/1.5 sans-serif, serif, monospace, cursive;
+}
+
+@media (prefers-color-scheme: light) {
+  #theme-switch ~ .container {
+    background: fixed $light url('../images/bg-1920x1200.png') no-repeat center center;
+    color: $dark;
+
+    a {
+      color: $dark;
+
+      &:hover {
+        color: $link-hover-dark;
+      }
+    }
+
+    .btn {
+      color: $shining;
+      background: radial-gradient($dark, $link-hover-dark);
+
+      &:hover {
+        color: $light;
+        text-shadow: 2px 2px 4px 4px $shining;
+        background: radial-gradient($link-hover-dark, $dark);
+        box-shadow: 3px 3px 5px 5px $shadow;
+      }
+    }
+
+    header {
+      border-bottom: 5px solid $shadow;
+      background: linear-gradient($light, $shining);
+      box-shadow: 5px 3px 30px $shadow;
+    }
+
+    main {
+      background: linear-gradient($shining, $light);
+      box-shadow: 5px 3px 30px $shadow;
+    }
+  }
+
+  #theme-switch:checked ~ .container {
+    background: fixed $dark url('../images/bg-1920x1200.png') no-repeat center center;
+    color: $light;
+
+    a {
+      color: $light;
+
+      &:hover {
+        color: $link-hover-light;
+      }
+    }
+
+    .btn {
+      color: $shadow;
+      background: radial-gradient($light, $link-hover-light);
+
+      &:hover {
+        color: $dark;
+        text-shadow: 2px 2px 4px 4px $shadow;
+        background: radial-gradient($link-hover-light, $light);
+        box-shadow: 3px 3px 5px 5px $shining;
+      }
+    }
+
+    header {
+      border-bottom: 5px solid $shining;
+      background: linear-gradient($dark, $shadow);
+      box-shadow: 5px 3px 30px $shining;
+    }
+
+    main {
+      background: linear-gradient($shadow, $dark);
+      box-shadow: 5px 3px 30px $shining;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #theme-switch ~ .container {
+    background: fixed $dark url('../images/bg-1920x1200.png') no-repeat center center;
+    color: $light;
+
+    a {
+      color: $light;
+
+      &:hover {
+        color: $link-hover-light;
+      }
+    }
+
+    .btn {
+      color: $shadow;
+      background: radial-gradient($light, $link-hover-light);
+
+      &:hover {
+        color: $dark;
+        text-shadow: 2px 2px 4px 4px $shadow;
+        background: radial-gradient($link-hover-light, $light);
+        box-shadow: 3px 3px 5px 5px $shining;
+      }
+    }
+
+    header {
+      border-bottom: 5px solid $shining;
+      background: linear-gradient($dark, $shadow);
+      box-shadow: 5px 3px 30px $shining;
+    }
+
+    main {
+      background: linear-gradient($shadow, $dark);
+      box-shadow: 5px 3px 30px $shining;
+    }
+  }
+
+  #theme-switch:checked ~ .container {
+    background: fixed $light url('../images/bg-1920x1200.png') no-repeat center center;
+    color: $dark;
+
+    a {
+      color: $dark;
+
+      &:hover {
+        color: $link-hover-dark;
+      }
+    }
+
+    .btn {
+      color: $shining;
+      background: radial-gradient($dark, $link-hover-dark);
+
+      &:hover {
+        color: $light;
+        text-shadow: 2px 2px 4px 4px $shining;
+        background: radial-gradient($link-hover-dark, $dark);
+        box-shadow: 3px 3px 5px 5px $shadow;
+      }
+    }
+
+    header {
+      border-bottom: 5px solid $shadow;
+      background: linear-gradient($light, $shining);
+      box-shadow: 5px 3px 30px $shadow;
+    }
+
+    main {
+      background: linear-gradient($shining, $light);
+      box-shadow: 5px 3px 30px $shadow;
+    }
+  }
+}
+
+.container {
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 3em;
+
+  .btn {
+    position: relative;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+  }
+}
