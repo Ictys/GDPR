@@ -1,6 +1,6 @@
 # Project Title
 
-Link to the page: [https://ictys.github.io/](https://ictys.github.io/)
+Link to the page: [https://ictys.github.io/GDPR/](https://ictys.github.io/GDPR/)
 
 ## Used Technologies
 
